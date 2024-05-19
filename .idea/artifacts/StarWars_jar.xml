@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="StarWars:jar">
+    <output-path>$USER_HOME$/OneDrive/Desktop/Paper Server/plugins</output-path>
+    <root id="archive" name="StarWars.jar">
+      <element id="module-output" name="StarWars" />
+    </root>
+  </artifact>
+</component>

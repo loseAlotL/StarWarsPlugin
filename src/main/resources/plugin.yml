@@ -1,0 +1,37 @@
+name: StarWars
+version: '${project.version}'
+main: org.randomlima.starwars.StarWars
+api-version: '1.20'
+commands:
+  sw.DC17:
+    description: A command that gives the player a DC-17.
+    usage: /<command>
+    permission: sw.items
+  sw.firepuncher:
+    description: A command that gives the player a 773 Firepuncher.
+    usage: /<command>
+    permission: sw.items
+  sw.thermaldetonator:
+    description: A command that gives the player a thermal detonator.
+    usage: /<command>
+    permission: sw.items
+  sw.detonator:
+    description: A command that gives the player a detonator.
+    usage: /<command>
+    permission: sw.items
+  sw.grenade:
+    description: A command that gives the player a grenade.
+    usage: /<command>
+    permission: sw.items
+  sw.grenadelauncher:
+    description: A command that gives the player a grenade launcher.
+    usage: /<command>
+    permission: sw.items
+  sw.flamethrower:
+    description: A command that gives the player a flame thrower.
+    usage: /<command>
+    permission: sw.items
+  sw.laserturret:
+    description: A command that gives the player a laser turret.
+    usage: /<command>
+    permission: sw.items
