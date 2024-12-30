@@ -1,37 +1,24 @@
-package org.randomlima.starwars.Listeners.DC17;
+package org.randomlima.starwars.Listeners.Laser;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Villager;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
-import org.checkerframework.checker.units.qual.A;
-import org.randomlima.starwars.Assets.DC17.ItemDC17;
 import org.randomlima.starwars.StarWars;
-import org.randomlima.starwars.Util.ItemUtil;
 
 import java.util.ArrayList;
 
-public class DC17LeftClick implements Listener {
-    ItemUtil itemUtil = new ItemUtil();
-    ItemDC17 itemDC17 = new ItemDC17();
-    StarWars plugin;
+public class Laser {
     static ArrayList<Villager> lasers = new ArrayList<>();
-    public DC17LeftClick(StarWars plugin){
+    private final StarWars plugin;
+    public Laser(StarWars plugin){
         this.plugin = plugin;
     }
-    @EventHandler
-    public void onRightClick(PlayerInteractEvent event){
-        if(!event.getAction().isRightClick())return;
-        if(!itemUtil.isSameItem(event.getItem(), itemDC17.get()));
-        Player player = event.getPlayer();
+    public void shoot(Player player){
         Location location = player.getLocation();
         Vector direction = player.getEyeLocation().getDirection();
 
@@ -53,8 +40,5 @@ public class DC17LeftClick implements Listener {
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
             villager.remove();
         }, 200L);
-    }
-    public static ArrayList<Villager> getLasers(){
-        return lasers;
     }
 }

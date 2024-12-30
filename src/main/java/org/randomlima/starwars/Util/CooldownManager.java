@@ -1,8 +1,9 @@
-package org.randomlima.starwars;
+package org.randomlima.starwars.Util;
 
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.randomlima.starwars.StarWars;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -13,7 +14,7 @@ public class CooldownManager extends BukkitRunnable {
     private String secondsRemainingIdentifier = "%seconds%";
     private String cooldownMessage;
 
-    public CooldownManager(StarWars  plugin, double seconds){ //we need to pass through the plugin to run the Bukkit task.
+    public CooldownManager(StarWars plugin, double seconds){ //we need to pass through the plugin to run the Bukkit task.
         this.coolDownSeconds = seconds; //cooldown in seconds.
         runTaskTimer(plugin, 0L, 5L); //timer runs 4 times a second.
     }

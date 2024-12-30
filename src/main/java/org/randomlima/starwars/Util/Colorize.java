@@ -1,4 +1,4 @@
-package org.randomlima.starwars;
+package org.randomlima.starwars.Util;
 
 import org.bukkit.ChatColor;
 
